@@ -1,0 +1,264 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  padding: 20px;
+  background: #eee;
+  background: url(https://jackrugile.com/images/misc/skyline-texture.png);
+  user-select: none;
+}
+
+/* PENTRU TITLU */
+
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,,800,900);
+
+.container {
+  position: relative;
+  @include center();
+}
+.title {
+  font-weight: 800;
+  color: transparent;
+  font-size: 120px;
+  background: url("https://images.unsplash.com/photo-1543441246-0c431f3ffe9d?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=968&q=80")
+    repeat;
+  background-position: 40% 50%;
+  -webkit-background-clip: text;
+  position: relative;
+  text-align: center;
+  line-height: 110px;
+  letter-spacing: 0px;
+}
+.subtitle {
+  display: block;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+/* canvas si lista videoclipuri */
+
+canvas {
+  border-style: groove;
+  border-radius: 5px;
+  height: 300px;
+  width: 500px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);      
+  
+}
+
+
+ul {
+  display: -webkit-inline-box;
+  width: 80%;
+  position:absolute;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+
+  padding-top: 350px;
+  list-style-type: none;
+  overflow:hidden; 
+  overflow-x: scroll;
+}
+
+li{
+  width: 300px;
+  text-align: center;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  block-size: 50%;
+
+}
+
+
+/* controale si bara de progres */
+ 
+.controale-video{
+  background-color:rgb(7, 6, 6);
+  opacity: 0.4;
+  border-radius: 5px;
+  height: 37px;
+  width: 500px;
+  position: absolute;
+  top: 71%;
+  left: 50%;
+  transform: translate(-50%, -50%); 
+  
+}
+
+.buton-play {
+  width: 20px;
+  position: absolute;
+  margin-top: 130px;
+  left: 34%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+ 
+}
+
+.buton-pause {
+  width: 20px;
+  position: absolute;
+  margin-top: 130px;
+  left: 36%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+
+}
+
+.buton-prev {
+  width: 20px;
+  position: absolute;
+  margin-top: 130px;
+  left: 38%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: white;
+
+}
+
+.buton-next {
+  width: 20px;
+  position: absolute;
+  margin-top: 130px;
+  left: 40%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: transparent;
+  border: none;
+  color: white;
+}
+
+#progress{
+  background-color: white;
+  appearance: none;
+  border: none;	
+  height: 5px;
+  position: absolute;
+  top: 70.7%;
+  left: 49%;
+  transform: translate(-50%, -50%); 
+}
+
+#timestamp{
+  color: white;
+  position: absolute;
+  font-family: "Montserrat";
+  font-size: 14px;
+  top: 70.7%;
+  left: 59%;
+  transform: translate(-50%, -50%);
+}
+
+#volume-up{
+  color: white;
+  position: absolute;
+  top: 70.7%;
+  left: 62.5%;
+  transform: translate(-50%, -50%);
+  }
+
+#volume{
+  background-color: white;
+  appearance: none;
+  border: none;	
+  height: 5px;
+  position: absolute;
+  top: 70.7%;
+  left: 65.5%;
+  transform: translate(-50%, -50%); 
+}
+
+/* butoane efecte video */
+
+
+.buton-normal{
+    width: 50px;
+    position: absolute;
+    margin-top: 180px;
+    left: 40%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: transparent;
+    border: none;
+    color: rgb(0, 0, 0);
+}
+
+.buton-sepia{
+  width: 50px;
+  position: absolute;
+  margin-top: 180px;
+  left: 45%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  color: rgb(216, 189, 140);
+}
+
+.buton-mov{
+  width: 50px;
+  position: absolute;
+  margin-top: 180px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  color: rgb(177, 91, 211);
+}
+
+.buton-mint{
+  width: 50px;
+  position: absolute;
+  margin-top: 180px;
+  left: 55%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+  color: rgb(104, 235, 191);
+}
+
+.buton-blackwhite{
+  width: 50px;
+  position: absolute;
+  margin-top: 180px;
+  left: 60%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  border-radius: 10px;
+  background-color: transparent;
+  border: none;
+}
+
+
+
+
+
+
+
